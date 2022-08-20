@@ -1,0 +1,21 @@
+.addedItems__wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 40vw;
+    margin-inline: auto;
+    padding: 2em;
+    background-color: rgb(231, 231, 231);
+    border-radius: 15px;
+    margin-top: 1em;
+}
+.addedItems__title{
+    color: #303030;
+    font-weight: bold;
+}
+.addedItems__text{
+    text-align: center;
+    color: #303030c5;
+    font-weight: bold;
+    margin-top: 1em;
+}

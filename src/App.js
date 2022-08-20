@@ -1,24 +1,64 @@
-import logo from './logo.svg';
 import './App.css';
+import Form from "./components/Form/Form"
+import AddedItems from "./components/AddedItems/AddedItems"
+import ErrorNoti from "./components/ErrorNoti/ErrorNoti"
+
+import { useEffect, useState } from 'react';
 
 function App() {
+
+  const [data, setData] = useState([])
+
+  const [isValid, setIsValid] = useState({
+    userNameValid: true,
+    ageValid: true,
+    allValid: true  
+  })
+
+
+  const onCheckingFormValidity = (data) => {
+    setIsValid({
+      ...data
+    })
+  }
+
+  const onClickErroNoti = () => {
+    setIsValid({
+      userNameValid: true,
+      ageValid: true,
+      allValid: true  
+    })
+  }
+
+
+  const onDeletingItem = (deletedId) => {
+    setData(prev => {
+      console.log(prev,'prev before')
+      for (let i = 0; i < prev.length; i++){
+        if (prev[i].id === deletedId) {
+          console.log(prev,i)
+          prev.splice(i, 1)
+        }
+      }
+      console.log(prev,'prev after')
+      return prev
+    })
+    
+  }
+  console.log(data,'data')
+  const formItems = (x) => {
+    setData(prev => [
+      ...prev,
+      x
+    ])
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Form onLiftingFormValue={formItems} onGettingValidityState={onCheckingFormValidity} />
+      <AddedItems data={data} onDeletingItem={onDeletingItem} />
+      <ErrorNoti data={isValid} onClickErroNoti={onClickErroNoti} />
+    </>
   );
 }
 

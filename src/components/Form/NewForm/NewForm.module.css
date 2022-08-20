@@ -1,0 +1,36 @@
+.newForm{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 40vw;
+    margin-inline: auto;
+    padding: 2em;
+    background-color: rgb(231, 231, 231);
+    border-radius: 15px;
+}
+.input__wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+.userName__label,.age__label{
+    color: #303030;
+    font-size: 1.1rem;
+    font-weight: bolder;
+
+}
+.userName__input,.age__input{
+    height: 35px;
+    font-size: 1.1rem;
+    border: 1px solid transparent;
+    padding-inline: 1em;
+    letter-spacing: 1px;
+}
+:is(.userName__input,.age__input):focus{
+    outline: none;
+    color: #1b1b1b;
+    border-color: rgb(172, 231, 145);
+}
+.age__input{
+    appearance: textfield;
+}

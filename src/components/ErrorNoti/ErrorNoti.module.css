@@ -1,0 +1,13 @@
+.error__desc{
+    padding: 1em 2em;
+}
+
+.error__message{
+    font-size: 2.7rem;
+    font-weight: bolder;
+    color: #303030;
+}
+.error__example{
+    color: #3f3e3eda;
+    font-size: 1.3rem;
+}

@@ -1,0 +1,15 @@
+.newItem__wrapper{
+    border: 1px solid #303030;
+    padding: 0.5em 1em;
+    display: flex;
+}
+.newItem__data{
+    color: #303030;
+}
+.delete__btn{
+    margin-left: auto;
+    cursor: pointer;
+}
+.delete__btn:hover path{
+    fill: red;
+}
