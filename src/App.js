@@ -3,7 +3,7 @@ import Form from "./components/Form/Form"
 import AddedItems from "./components/AddedItems/AddedItems"
 import ErrorNoti from "./components/ErrorNoti/ErrorNoti"
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 function App() {
 

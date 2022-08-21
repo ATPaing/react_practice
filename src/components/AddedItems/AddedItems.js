@@ -1,6 +1,6 @@
 import NewItems from "./newItems/NewItems"
 import styles from "./AddedItems.module.css"
-import { useState } from "react"
+
 
 export default function AddedItems({ data,onDeletingItem }) {
 
