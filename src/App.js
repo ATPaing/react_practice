@@ -30,22 +30,26 @@ function App() {
     })
   }
 
-
+  // USED SPLICE METHOD
   const onDeletingItem = (deletedId) => {
     setData(prev => {
-      console.log(prev,'prev before')
       for (let i = 0; i < prev.length; i++){
         if (prev[i].id === deletedId) {
-          console.log(prev,i)
           prev.splice(i, 1)
         }
       }
-      console.log(prev,'prev after')
-      return prev
+      return [
+        ...prev
+      ]
     })
     
   }
-  console.log(data,'data')
+
+  // USED FILTER METHOD
+  // const onDeletingItem = (deletedId) => {
+  //   setData(prev => prev.filter(item => item.id !== deletedId))
+  // }
+  
   const formItems = (x) => {
     setData(prev => [
       ...prev,

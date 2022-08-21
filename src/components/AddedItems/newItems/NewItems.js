@@ -2,8 +2,6 @@ import styles from "./NewItems.module.css"
 
 export default function NewItems({ data,onDeletingItem}) {
 
-    
-
     const a = () => {
         onDeletingItem(data.id)
     }

@@ -5,8 +5,6 @@ import styles from "./AddedItems.module.css"
 export default function AddedItems({ data,onDeletingItem }) {
 
 
-
-
     const newItem = data.map(d => {
 
         return (
